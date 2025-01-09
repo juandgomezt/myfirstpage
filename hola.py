@@ -53,3 +53,11 @@ try:  # Intenta ejecutar el siguiente bloque de código
 except ZeroDivisionError:
     print("No se puede dividir por cero")
 
+#dar un numero entero y que retorne los numeros primos.  necesito que lo pida en esta funcion y no utilize las de arriba
+def es_primo(numero):  # Define la función es_primo que toma un parámetro numero
+    if numero < 2:  # Si el número es menor que 2
+        return False  # No es primo
+    for i in range(2, int(math.sqrt(numero)) + 1):  # Bucle for que itera desde 2 hasta la raíz cuadrada del número
+        if numero % i == 0:  # Si el número es divisible por i
+            return False  # No es primo
+    return True  # Es primo
